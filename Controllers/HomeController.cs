@@ -18,6 +18,21 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Pedidos()
+    {
+        return View();
+    }
+
+    public IActionResult Produtos()
+    {
+        return View();
+    }
+
+    public IActionResult Clientes()
+    {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

@@ -5,11 +5,13 @@
         public static string Nome = "Strogonoff Land Ltda.";
         public static List<Produto> Produtos;
         public static List<Pedido> Pedidos;
+        public static List<Cliente> Clientes;
 
         public Empresa()
         {
             Produtos = new List<Produto>();
             Pedidos = new List<Pedido>();
+            Clientes = new List<Cliente>();
 
             Produtos.Add(new Produto(1, "Strogonoff de Carne", 29.90f));
             Produtos.Add(new Produto(2, "Strogonoff de Frango", 27.90f));
@@ -32,7 +34,9 @@
             Produtos.Add(new Produto(19, "Strogonoff de Carne de Sol", 33.90f));
             Produtos.Add(new Produto(20, "Strogonoff de Legumes", 22.90f));
 
+            
             Cliente laura = new Cliente("Laura Mariana", 123456, "Rua dos Bobos, 0", "+55 41 99999-9999", "laura@mariana.com");
+            Clientes.Add(laura);
 
             Pedido meuPedido = new Pedido(1, "Não Enviado", DateTime.Now, "Longhi", laura);
             meuPedido.AdicionarProduto(Produtos[2]);
