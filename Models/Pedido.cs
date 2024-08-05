@@ -25,5 +25,18 @@ namespace Atividade3.Models
         {
             Produtos.Add(produto);
         }
+
+        public float PrecoTotal()
+        {
+            float total = 0;
+
+            foreach(Produto produto in Produtos)
+            {
+                total += produto.Valor;
+            }
+
+            return total;
+
+        }
     }
 }

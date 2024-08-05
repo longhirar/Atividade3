@@ -1,25 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
+<div>
+    <button onclick="location.assign('/Home/Pedidos')" type="button" class="btn btn-primary">Pedidos</button>
+    <button onclick="location.assign('/Home/Produtos')" type="button" class="btn btn-primary">Produtos</button>
+    <button onclick="location.assign('/Home/Clientes')" type="button" class="btn btn-primary">Clientes</button>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome do Cliente</th>
-            <th scope="col">Produtos</th>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            foreach (Pedido pedido in Empresa.Pedidos)
-            {
-                <tr>
-                    <th scope="row">@pedido.ID</th>
-                    <td>@pedido.Cliente.Nome</td>
-                    <td>@pedido.Produtos</td>
-                </tr>
-            }
-        }
-    </tbody>
-</table>
+</div>
